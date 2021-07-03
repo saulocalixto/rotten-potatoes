@@ -48,11 +48,11 @@ spec:
             failureThreshold: 1
           resources:
             requests:
-              cpu: "200m"
-              memory: "32Mi"
+              cpu: "800m"
+              memory: "128Mi"
             limits:
-              cpu: "400m"
-              memory: "64Mi"
+              cpu: "1600m"
+              memory: "256Mi"
 
 ---
 
