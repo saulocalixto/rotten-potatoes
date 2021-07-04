@@ -9,6 +9,10 @@ spec:
       app: movies
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /metris
+        prometheus.io/port: "5000"
       labels:
         app: movies
     spec:
@@ -80,7 +84,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: movies
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   targetCPUUtilizationPercentage: 60
     
